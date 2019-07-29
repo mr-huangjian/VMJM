@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="constructor"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- <bean class="mr.huangjian.AutoWiring.AutoWiringDAO" id="autoWiringDAO"/> -->
+
+    <bean class="mr.huangjian.AutoWiring.AutoWiringDAO" id="autoWiringDAO11"/>
+
+    <bean class="mr.huangjian.AutoWiring.AutoWiringService" id="autoWiringService">
+        <!-- <property name="autoWiringDAO" ref="autoWiringDAO"/> -->
+    </bean>
+
+</beans>

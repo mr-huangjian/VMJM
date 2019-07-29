@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 管理dao层的对象 -->
+    <bean id="studentDao" class="bean.factory.student.StudentDaoImpl" />
+
+    <!-- 管理service层的对象 -->
+    <bean id="studentService" class="bean.factory.student.StudentServiceImpl">
+        <!-- 给指定的dao属性赋值 -->
+        <property name="dao" ref="studentDao" />
+    </bean>
+
+    <!--
+        创建student类的bean，xml文件中所有的bean都是单例
+        scope="singleton" (默认)单一实例
+        lazy-init="true"  (默认)设置延迟加载
+    -->
+    <bean id="student" class="bean.factory.student.Student" lazy-init="true">
+        <property name="id" value="20" />
+        <property name="name" value="小黑" />
+    </bean>
+
+</beans>
