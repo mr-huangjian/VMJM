@@ -1,2 +1,2 @@
-# VMJM
- Vue Mybatis Java MySQL
+# Vue Mybatis Java MySQL Learning
+ 
